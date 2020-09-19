@@ -1,0 +1,17 @@
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\QuickSortTest.dll
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\QuickSortTest.pdb
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\QuickSort.exe
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\QuickSort.pdb
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\QuickSort.exe.config
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.csprojAssemblyReference.cache
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.csproj.CoreCompileInputs.cache
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.csproj.CopyComplete
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.dll
+C:\Users\ariza\source\repos\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.pdb
