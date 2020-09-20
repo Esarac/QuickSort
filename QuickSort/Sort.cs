@@ -20,7 +20,7 @@ namespace QuickSort
             }
         }
 
-        public int Partition(int[] a, int p, int r)
+        private  int Partition(int[] a, int p, int r)
         {
             int x = a[r];
             int i = p - 1;
@@ -35,7 +35,9 @@ namespace QuickSort
                     a[j] = aux;
                 }
             }
+            int aux2 = a[i + 1];
             a[i + 1] = a[r];
+            a[r] = aux2;
 
             return i + 1;
         }
@@ -51,14 +53,14 @@ namespace QuickSort
             }
         }
 
-        public int RandomPartition(int[] a, int p, int r)
+        private  int RandomPartition(int[] a, int p, int r)
         {
-            //Random rnd = new Random();
-            //int i = rnd.Next(p, r);
+            Random rnd = new Random();
+            int i = rnd.Next(p, r);
 
-            //int aux = a[i];//Guarda
-            //a[i] = a[r];
-            //a[r] = aux;
+            int aux = a[i];//Guarda
+            a[i] = a[r];
+            a[r] = aux;
 
             return Partition(a, p, r);
         }
