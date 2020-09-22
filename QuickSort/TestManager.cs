@@ -4,13 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
+using System.IO;
 
 namespace QuickSort
 {
     class TestManager
     {
+        //Constants
+        public const int MAX_VALUE = 1000000000;
+        public const int MIN_VALUE = 1;
+
         //Attributes
         private List<Test> tests;
+        private string path;
         private Sort sort;
         private List<string> rows;
 
@@ -18,49 +24,54 @@ namespace QuickSort
         private int rowNumber;
 
         //Constructor
-        public TestManager(List<Test> tests)
+        public TestManager(List<Test> tests, string path)
         {
             this.tests = tests;
+            this.path = path;
             sort = new Sort();
             rows = new List<string>();
+            rowNumber = 1;
+            GenerateHeader();
         }
 
         //Methods
         public void RunTests()
         {
-            foreach(Test test in tests)
+            foreach (Test test in tests)
             {
-                for(int i = 0; i < test.Repetitions; i++)
+                for (int i = 0; i < test.Repetitions; i++)
                 {
                     RunTest(test);
                 }
             }
+
+            ExportResults();
         }
 
-
-        public void RunTest(Test test)
+        private void RunTest(Test test)
         {
-            foreach(int size in test.Sizes)
+            foreach (int size in test.Sizes)
             {
                 var list = SortList(CreateList(size), test.Order);
                 var timeCounter = RunQuickSort(test.Randomized, list);
+                AddLine(test, timeCounter, size);
             }
         }
 
         //These methods allows creating the list with random numbers and sort them in the specified order.
-        public List<int> CreateList(int size)
+        private List<int> CreateList(int size)
         {
             var list = new List<int>();
 
             for (int i = 0; i < size; i++)
             {
-                list.Add(new Random().Next(1, (int) Math.Pow(10, 9)));
+                list.Add(new Random().Next(MIN_VALUE, MAX_VALUE));
             }
 
             return list;
         }
 
-        public List<int> SortList(List<int> list, int order)
+        private List<int> SortList(List<int> list, int order)
         {
 
             if (order == 1)
@@ -76,24 +87,53 @@ namespace QuickSort
         }
 
         //This method allows taking the execution time
-        public Stopwatch RunQuickSort(bool randomized, List<int> list)
+        private Stopwatch RunQuickSort(bool randomized, List<int> list)
         {
             var timeCounter = new Stopwatch();
 
             if (randomized)
             {
                 timeCounter.Start();
-                sort.RandomQuickSort(list.ToArray(), 0, list.Count);
+                sort.RandomQuickSort(list.ToArray(), 0, list.Count-1);
                 timeCounter.Stop();
             }
             else
             {
                 timeCounter.Start();
-                sort.QuickSort(list.ToArray(), 0, list.Count);
+                sort.QuickSort(list.ToArray(), 0, list.Count-1);
                 timeCounter.Stop();
             }
 
             return timeCounter;
         }
+
+        //This method creates a row of the table.
+        private void AddLine(Test test, Stopwatch timer, int size)
+        {
+            var variant = test.Randomized ? "Randomized" : "Normal";
+
+            var state = "Random";
+
+            if (test.Order == Test.DESCENDING)
+                state = "Descending";
+            else if (test.Order == Test.ASCENDING)
+                state = "Ascending";
+
+
+            var elapsed = timer.Elapsed;
+
+            rows.Add(string.Format("{0},{1},{2},{3},{4:0.###}", rowNumber, variant, state, size, elapsed.TotalMilliseconds));
+            rowNumber++;
+
+            Console.WriteLine("Row added!");
+        }
+
+        private void ExportResults()
+        {
+            File.WriteAllLines(path, rows);
+        }
+
+        //Generators
+        private void GenerateHeader() => rows.Add("TEST,VARIANT,STATE,SIZE,TIME (In Ms)");
     }
 }
