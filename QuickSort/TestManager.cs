@@ -74,11 +74,11 @@ namespace QuickSort
         private List<int> SortList(List<int> list, int order)
         {
 
-            if (order == 1)
+            if (order == Test.ASCENDING)
             {
                 list.Sort();
             }
-            else if (order == 2)
+            else if (order == Test.DESCENDING)
             {
                 list.Sort((a, b) => b.CompareTo(a));
             }
@@ -123,13 +123,17 @@ namespace QuickSort
             var elapsed = timer.Elapsed;
 
             rows.Add(string.Format("{0},{1},{2},{3},{4:0.###}", rowNumber, variant, state, size, elapsed.TotalMilliseconds));
-            rowNumber++;
 
-            Console.WriteLine("Row added!");
+            int total = tests.Count * test.Sizes.Length * test.Repetitions;
+
+            Console.WriteLine(string.Format("{0}/{1} rows added", rowNumber, total));
+            
+            rowNumber++;
         }
 
         private void ExportResults()
         {
+            Console.WriteLine("Start writing");
             File.WriteAllLines(path, rows);
         }
 

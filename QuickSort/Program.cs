@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace QuickSort
@@ -10,8 +11,8 @@ namespace QuickSort
     {
         public static void Main(string[] args)
         {
-            int[] sizes = { 10, 100, 1000, 10000, 11000};
-            int repetitions = 10;
+            int[] sizes = { 10, 100, 1000, 10000, 100000};
+            int repetitions = 1;
             var path = @"";
             
             Test testOne = new Test(false, Test.ASCENDING, repetitions, sizes);
@@ -32,7 +33,7 @@ namespace QuickSort
 
             TestManager testManager = new TestManager(tests, path);
 
-            testManager.RunTests();
+            new Thread(() => { testManager.RunTests(); }, 10485760).Start();
         }
     }
 }
