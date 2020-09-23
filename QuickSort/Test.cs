@@ -16,8 +16,7 @@ namespace QuickSort
         //Attributes
         private bool randomized;
         private int order;
-        private int repetitions;
-        private int[] sizes;
+        private int size;
 
         //Properties
         public bool Randomized
@@ -30,23 +29,17 @@ namespace QuickSort
             get { return order; }
         }
 
-        public int Repetitions
+        public int Size
         {
-            get { return repetitions; }
-        }
-
-        public int[] Sizes
-        {
-            get { return sizes; }
+            get { return size; }
         }
 
         //Constructor
-        public Test(bool randomized, int order, int repetitions, int[] sizes)
+        public Test(bool randomized, int order, int size)
         {
             this.randomized = randomized;
             this.order = order;
-            this.repetitions = repetitions;
-            this.sizes = sizes;
+            this.size = size;
         }
     }
 }

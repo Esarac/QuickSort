@@ -5,41 +5,53 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 using System.IO;
+using System.Security.Cryptography.X509Certificates;
+using System.Globalization;
 
 namespace QuickSort
 {
     class TestManager
     {
         //Constants
+        public const int REPETITIONS = 2;
         public const int MAX_VALUE = 1000000000;
         public const int MIN_VALUE = 1;
 
         //Attributes
         private List<Test> tests;
-        private string path;
         private Sort sort;
+        private string path;
         private List<string> rows;
 
         //Aux
         private int rowNumber;
+        private int [,][] testArray;
 
         //Constructor
         public TestManager(List<Test> tests, string path)
         {
-            this.tests = tests;
+            //CSV
             this.path = path;
-            sort = new Sort();
             rows = new List<string>();
+            //Treatments
+            this.tests = tests;
+            //Sort
+            sort = new Sort();
+            //Aux
             rowNumber = 1;
+
             GenerateHeader();
         }
 
         //Methods
-        public void RunTests()
+                //Test
+        public void RunTests()//Ya
         {
+            GenerateTestArrays();
+
             foreach (Test test in tests)
             {
-                for (int i = 0; i < test.Repetitions; i++)
+                for (int i = 0; i < REPETITIONS; i++)
                 {
                     RunTest(test);
                 }
@@ -48,67 +60,74 @@ namespace QuickSort
             ExportResults();
         }
 
+        private void GenerateTestArrays(){
+            testArray = new int[3,5][];
+            Random randomClass = new Random();
+
+            for(int i = 0; i< tests.Count; i++)
+            {
+                int iOrder = tests[i].Order;
+                int iSize = ((int) Math.Log10((double) tests[i].Size)) - 1;
+
+                testArray[iOrder, iSize] = new int[tests[i].Size];
+                int[] actualArray = testArray[iOrder, iSize];
+
+                switch (iOrder)
+                {
+                    case 1:
+                        for (int j=0; j < actualArray.Length; j++)
+                        {
+                            actualArray[j] = randomClass.Next(MIN_VALUE, MAX_VALUE);
+                        }
+                        break;
+                    case 2:
+                        for (int j = 0; j < actualArray.Length; j++)
+                        {
+                            actualArray[j] = j+1;
+                        }
+                        break;
+                    case 3:
+                        for (int j = 0; j < actualArray.Length; j++)
+                        {
+                            actualArray[j] = actualArray.Length - j;
+                        }
+                        break;
+                }
+
+            }
+        }
+
         private void RunTest(Test test)
         {
-            foreach (int size in test.Sizes)
-            {
-                var list = SortList(CreateList(size), test.Order);
-                var timeCounter = RunQuickSort(test.Randomized, list);
-                AddLine(test, timeCounter, size);
-            }
-        }
-
-        //These methods allows creating the list with random numbers and sort them in the specified order.
-        private List<int> CreateList(int size)
-        {
-            var list = new List<int>();
-
-            for (int i = 0; i < size; i++)
-            {
-                list.Add(new Random().Next(MIN_VALUE, MAX_VALUE));
-            }
-
-            return list;
-        }
-
-        private List<int> SortList(List<int> list, int order)
-        {
-
-            if (order == Test.ASCENDING)
-            {
-                list.Sort();
-            }
-            else if (order == Test.DESCENDING)
-            {
-                list.Sort((a, b) => b.CompareTo(a));
-            }
-
-            return list;
+            int iSize = ((int)Math.Log10((double)test.Size)) - 1;
+            var timeCounter = RunQuickSort(test.Randomized, ( (int[]) testArray[test.Order, iSize].Clone() ));
+            AddLine(test, timeCounter);
         }
 
         //This method allows taking the execution time
-        private Stopwatch RunQuickSort(bool randomized, List<int> list)
+        private Stopwatch RunQuickSort(bool randomized, int[] list)
         {
             var timeCounter = new Stopwatch();
 
             if (randomized)
             {
                 timeCounter.Start();
-                sort.RandomQuickSort(list.ToArray(), 0, list.Count-1);
+                sort.RandomQuickSort(list, 0, list.Length-1);
                 timeCounter.Stop();
             }
             else
             {
                 timeCounter.Start();
-                sort.QuickSort(list.ToArray(), 0, list.Count-1);
+                sort.QuickSort(list, 0, list.Length-1);
                 timeCounter.Stop();
             }
 
             return timeCounter;
         }
 
+            //CSV
         //This method creates a row of the table.
-        private void AddLine(Test test, Stopwatch timer, int size)
+        private void AddLine(Test test, Stopwatch timer)
         {
             var variant = test.Randomized ? "Randomized" : "Normal";
 
@@ -122,9 +141,9 @@ namespace QuickSort
 
             var elapsed = timer.Elapsed;
 
-            rows.Add(string.Format("{0},{1},{2},{3},{4:0.###}", rowNumber, variant, state, size, elapsed.TotalMilliseconds));
+            rows.Add(string.Format("{0},{1},{2},{3},{4:0.###}", rowNumber, variant, state, test.Size, elapsed.TotalMilliseconds.ToString("G", CultureInfo.InvariantCulture)));
 
-            int total = tests.Count * test.Sizes.Length * test.Repetitions;
+            int total = tests.Count * REPETITIONS;
 
             Console.WriteLine(string.Format("{0}/{1} rows added", rowNumber, total));
             

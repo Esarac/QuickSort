@@ -11,25 +11,42 @@ namespace QuickSort
     {
         public static void Main(string[] args)
         {
-            int[] sizes = { 10, 100, 1000, 10000, 100000};
-            int repetitions = 1;
-            var path = @"";
-            
-            Test testOne = new Test(false, Test.ASCENDING, repetitions, sizes);
-            Test testTwo = new Test(true, Test.ASCENDING, repetitions, sizes);
-            Test testThree = new Test(false, Test.DESCENDING, repetitions, sizes);
-            Test testFour = new Test(true, Test.DESCENDING, repetitions, sizes);
-            Test testFive = new Test(false, Test.RANDOM, repetitions, sizes);
-            Test testSix = new Test(true, Test.RANDOM, repetitions, sizes);
+            var path = @"C:\Users\ariza\Documents\pro\doc.csv";
 
             var tests = new List<Test>();
 
-            tests.Add(testOne);
-            tests.Add(testTwo);
-            tests.Add(testThree);
-            tests.Add(testFour);
-            tests.Add(testFive);
-            tests.Add(testSix);
+            //NOT RANDOM
+                //ASCENDING
+            tests.Add(new Test(false, Test.ASCENDING, 10));
+            tests.Add(new Test(false, Test.ASCENDING, 100));
+            tests.Add(new Test(false, Test.ASCENDING, 1000));
+            tests.Add(new Test(false, Test.ASCENDING, 10000));
+                //DESCENDING
+            tests.Add(new Test(false, Test.DESCENDING, 10));
+            tests.Add(new Test(false, Test.DESCENDING, 100));
+            tests.Add(new Test(false, Test.DESCENDING, 1000));
+            tests.Add(new Test(false, Test.DESCENDING, 10000));
+                //RANDOM
+            tests.Add(new Test(false, Test.RANDOM, 10));
+            tests.Add(new Test(false, Test.RANDOM, 100));
+            tests.Add(new Test(false, Test.RANDOM, 1000));
+            tests.Add(new Test(false, Test.RANDOM, 10000));
+            //NOT RANDOM
+                //ASCENDING
+            tests.Add(new Test(true, Test.ASCENDING, 10));
+            tests.Add(new Test(true, Test.ASCENDING, 100));
+            tests.Add(new Test(true, Test.ASCENDING, 1000));
+            tests.Add(new Test(true, Test.ASCENDING, 10000));
+                //DESCENDING
+            tests.Add(new Test(true, Test.DESCENDING, 10));
+            tests.Add(new Test(true, Test.DESCENDING, 100));
+            tests.Add(new Test(true, Test.DESCENDING, 1000));
+            tests.Add(new Test(true, Test.DESCENDING, 10000));
+                //RANDOM
+            tests.Add(new Test(true, Test.RANDOM, 10));
+            tests.Add(new Test(true, Test.RANDOM, 100));
+            tests.Add(new Test(true, Test.RANDOM, 1000));
+            tests.Add(new Test(true, Test.RANDOM, 10000));
 
             TestManager testManager = new TestManager(tests, path);
 

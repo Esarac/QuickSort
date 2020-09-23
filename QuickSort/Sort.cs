@@ -10,6 +10,10 @@ namespace QuickSort
 {
     public class Sort
     {
+        public enum Order {
+            Ascendant, Descendant
+        }
+
         //No Randomized
         public void QuickSort(int[] a, int p, int r) {
             if (p < r)

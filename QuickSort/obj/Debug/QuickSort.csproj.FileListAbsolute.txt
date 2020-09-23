@@ -18,3 +18,4 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSort\obj\Debug
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSort\obj\Debug\QuickSort.exe
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSort\obj\Debug\QuickSort.pdb
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSort\obj\Debug\QuickSort.csprojAssemblyReference.cache
+C:\Users\ariza\OneDrive\Documentos\GitHub\QuickSort\QuickSort\obj\Debug\QuickSort.csprojAssemblyReference.cache
