@@ -11,7 +11,7 @@ namespace QuickSort
     {
         public static void Main(string[] args)
         {
-            var path = @"C:\Users\ariza\Documents\pro\doc.csv";
+            var path = "../../results/result.csv";
 
             var tests = new List<Test>();
 

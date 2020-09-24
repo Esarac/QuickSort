@@ -13,7 +13,7 @@ namespace QuickSort
     class TestManager
     {
         //Constants
-        public const int REPETITIONS = 2;
+        public const int REPETITIONS = 1000;
         public const int MAX_VALUE = 1000000000;
         public const int MIN_VALUE = 1;
 
@@ -141,7 +141,7 @@ namespace QuickSort
 
             var elapsed = timer.Elapsed;
 
-            rows.Add(string.Format("{0},{1},{2},{3},{4:0.###}", rowNumber, variant, state, test.Size, elapsed.TotalMilliseconds.ToString("G", CultureInfo.InvariantCulture)));
+            rows.Add(string.Format("{0},{1},{2},{3},{4:0.########}", rowNumber, variant, state, test.Size, elapsed.TotalMilliseconds));
 
             int total = tests.Count * REPETITIONS;
 
@@ -152,7 +152,6 @@ namespace QuickSort
 
         private void ExportResults()
         {
-            Console.WriteLine("Start writing");
             File.WriteAllLines(path, rows);
         }
 
