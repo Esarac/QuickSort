@@ -19,3 +19,10 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSort\obj\Debug
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSort\obj\Debug\QuickSort.pdb
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSort\obj\Debug\QuickSort.csprojAssemblyReference.cache
 C:\Users\ariza\OneDrive\Documentos\GitHub\QuickSort\QuickSort\obj\Debug\QuickSort.csprojAssemblyReference.cache
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSort\bin\Debug\QuickSort.exe.config
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSort\bin\Debug\QuickSort.exe
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSort\bin\Debug\QuickSort.pdb
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSort\obj\Debug\QuickSort.csprojAssemblyReference.cache
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSort\obj\Debug\QuickSort.csproj.CoreCompileInputs.cache
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSort\obj\Debug\QuickSort.exe
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSort\obj\Debug\QuickSort.pdb

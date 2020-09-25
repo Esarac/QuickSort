@@ -49,3 +49,23 @@ C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSortTest\obj\D
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.csproj.CopyComplete
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.dll
 C:\Users\jseba\Desktop\ALL\PROGRAMING\Integrador I\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.pdb
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.resources.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.resources.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\QuickSortTest.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\QuickSortTest.pdb
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\QuickSort.exe
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\QuickSort.pdb
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\QuickSort.exe.config
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.csprojAssemblyReference.cache
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.csproj.CoreCompileInputs.cache
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.csproj.CopyComplete
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.dll
+C:\Users\Juan José Restrepo B\Desktop\Trabajos 5 semestre\Integrador\QuickSort\QuickSortTest\obj\Debug\QuickSortTest.pdb
